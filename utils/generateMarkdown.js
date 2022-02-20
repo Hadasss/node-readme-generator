@@ -26,20 +26,21 @@ function renderLicenseLink(license) {
   } else if (license == "Apache") {
     return "[License](https://opensource.org/licenses/Apache-2.0)";
   } else {
-    return ``;
+    return "";
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
+// BUG
 function renderLicenseSection(license) {
-  if (license) {
+  if (!license) {
+    return "";
+  } else {
     return `
     This app is covered under ${license} license.
     ${renderLicenseLink(license)}
     `;
-  } else if (!license) {
-    return "";
   }
 }
 
@@ -67,7 +68,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
- ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}
 
   ## Contributing 
   ${data.contributing}
@@ -76,25 +77,11 @@ function generateMarkdown(data) {
   ${data.tests}
 
   ## Questions
-  For more information or questions about the project, contact ${
-    data.email
-  } or DM me on GitHub: [${data.githubuser}](https://github.com/${
+  For more information or questions about the project, contact ${data.email}
+  Contact me on GitHub: [${data.githubuser}](https://github.com/${
     data.githubuser
   }/).
 `;
 }
 
 module.exports = generateMarkdown;
-
-// FYI property names for the data object:
-// {
-//   projectTitle: '',
-//   description: '',
-//   installation: '',
-//   usage: '',
-//   license: [ 'MIT' ],
-//   contributing: false,
-//   tests: '',
-//   email: '',
-//   githubuser: ''
-// }

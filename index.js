@@ -47,15 +47,14 @@ const questions = [
     choices: ["MIT", "GNU GPLv3", "Mozilla", "Apache"],
   },
   {
-    type: "confirm",
+    type: "input",
     name: "contributing",
-    message: "This project welcomes contributors",
-    default: false,
+    message: "Explain contribution guidelines",
   },
   {
     type: "input",
     name: "tests",
-    message: "", // QUESTION examples for tests?
+    message: "Provide testing instructions",
   },
   {
     type: "input",
