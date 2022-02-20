@@ -44,7 +44,7 @@ const questions = [
     type: "checkbox",
     name: "license",
     message: "Choose which license your application is covered under",
-    choices: ["MIT", "GNU GPLv3", "Mozilla", "Apache", "Unlicense"],
+    choices: ["MIT", "GNU GPLv3", "Mozilla", "Apache"],
   },
   {
     type: "confirm",
@@ -59,8 +59,13 @@ const questions = [
   },
   {
     type: "input",
-    name: "questions",
-    message: "Enter your email and GitHub username", // put into an array
+    name: "email",
+    message: "Enter your email",
+  },
+  {
+    type: "input",
+    name: "githubuser",
+    message: "Enter your GitHub username",
   },
 ];
 
