@@ -77,4 +77,7 @@ promptUser()
   .then((answers) => generateMarkdown(answers))
   .then((fileContent) => {
     return createFile(fileContent);
+  })
+  .catch((err) => {
+    console.log(err);
   });

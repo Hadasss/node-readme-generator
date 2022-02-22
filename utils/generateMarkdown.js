@@ -18,13 +18,14 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license == "MIT") {
-    return "[License: MIT](https://opensource.org/licenses/MIT)";
+    return (mit = "[License: MIT](https://opensource.org/licenses/MIT)");
   } else if (license == "Mozilla") {
-    return "[License: MPL 2.0](https://opensource.org/licenses/MPL-2.0)";
+    return (mozilla =
+      "[License: MPL 2.0](https://opensource.org/licenses/MPL-2.0)");
   } else if (license == "GNU GPLv3") {
-    return "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
+    return (gplv = "[License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)");
   } else if (license == "Apache") {
-    return "[License](https://opensource.org/licenses/Apache-2.0)";
+    return (apache = "[License](https://opensource.org/licenses/Apache-2.0)");
   } else {
     return "";
   }
@@ -32,14 +33,13 @@ function renderLicenseLink(license) {
 
 // Create a function that returns the license section of README
 // If there is no license, return an empty string
-// BUG
 function renderLicenseSection(license) {
-  if (!license) {
+  if (!license || license.length > 1) {
     return "";
   } else {
     return `
-    This app is covered under ${license} license.
-    ${renderLicenseLink(license)}
+This app is covered under ${license} license.
+${renderLicenseLink(license)}
     `;
   }
 }
