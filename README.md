@@ -43,5 +43,5 @@ THEN I am taken to the corresponding section of the README
 ![image](https://user-images.githubusercontent.com/80355222/155231178-75c6b006-d247-4008-9b06-6abfe19fda1e.png)
 
 
-## Link to Live Deployment:
+## Link to Recorded Demo:
 https://drive.google.com/file/d/11jkDicD5ZCSIi2fXsJiZCNEMPRYRnqrN/view
